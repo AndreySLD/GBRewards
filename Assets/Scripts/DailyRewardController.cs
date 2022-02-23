@@ -70,6 +70,7 @@ public class DailyRewardController
             delta = new TimeSpan(0);
 
         _rewardView.DailyRewardTimer.text = delta.ToString();
+        _rewardView.ProgressBarDaily.value = (float)delta.TotalSeconds;
     }
 
     private void InitSlots()
@@ -82,6 +83,8 @@ public class DailyRewardController
             slotInstance.SetData(reward, i+1, false);
             _slots.Add(slotInstance);
         }
+
+        _rewardView.ProgressBarDaily.maxValue = _rewardView.DailyTimeCooldown;
     }
 
     private void SubscribeButtons()

@@ -71,6 +71,7 @@ public class WeeklyRewardController
             delta = new TimeSpan(0);
 
         _rewardView.WeeklyRewardTimer.text = delta.ToString();
+        _rewardView.ProgressBarWeekly.value = (float)delta.TotalSeconds;
     }
 
     private void InitSlots()
@@ -83,6 +84,8 @@ public class WeeklyRewardController
             slotInstance.SetData(reward, i + 1, false);
             _slots.Add(slotInstance);
         }
+
+        _rewardView.ProgressBarWeekly.maxValue = _rewardView.WeeklyTimeCooldown;
     }
 
     private void SubscribeButtons()

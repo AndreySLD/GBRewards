@@ -42,6 +42,10 @@ public class RewardView : MonoBehaviour
     public Button GetDailyRewardButton;
     [SerializeField]
     public Button GetWeeklyRewardButton;
+    [SerializeField]
+    public Slider ProgressBarDaily;
+    [SerializeField]
+    public Slider ProgressBarWeekly;
     #endregion
 
     public int CurrentActiveDailySlot
