@@ -1,4 +1,4 @@
-﻿public enum RewardType
+﻿public enum RewardTypeByCurrency
 {
     None,
     Wood,

@@ -7,7 +7,7 @@ using UnityEngine;
 public class Reward
 {
     public int Count;
-    public RewardType Type;
+    public RewardTypeByCurrency TypeByCur;
     public Sprite Icon;
     
 }
