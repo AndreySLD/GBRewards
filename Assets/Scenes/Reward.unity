@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_LightingSettings: {fileID: 1523901051}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -118,87 +118,11 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &12018992 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 904241035726058335, guid: 15b7dd2017c4cf047b86577dc63c6436,
-    type: 3}
-  m_PrefabInstance: {fileID: 768230161}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &12018993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 12018992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 225940bb8cf85e641964bed81136a65d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimeCooldown: 15
-  TimeDeadline: 172800
-  Rewards:
-  - Count: 100
-    Type: 1
-    Icon: {fileID: 21300000, guid: e0eac6b76fdd842e88a7f8c75ecffaf4, type: 3}
-  - Count: 200
-    Type: 0
-    Icon: {fileID: 21300000, guid: e0eac6b76fdd842e88a7f8c75ecffaf4, type: 3}
-  - Count: 10
-    Type: 2
-    Icon: {fileID: 21300000, guid: f59401c5c79564fd1ae3bfb0876455a7, type: 3}
-  - Count: 10
-    Type: 2
-    Icon: {fileID: 21300000, guid: f59401c5c79564fd1ae3bfb0876455a7, type: 3}
-  - Count: 10
-    Type: 2
-    Icon: {fileID: 21300000, guid: f59401c5c79564fd1ae3bfb0876455a7, type: 3}
-  - Count: 10
-    Type: 2
-    Icon: {fileID: 21300000, guid: f59401c5c79564fd1ae3bfb0876455a7, type: 3}
-  - Count: 10
-    Type: 2
-    Icon: {fileID: 21300000, guid: f59401c5c79564fd1ae3bfb0876455a7, type: 3}
-  - Count: 10
-    Type: 2
-    Icon: {fileID: 21300000, guid: f59401c5c79564fd1ae3bfb0876455a7, type: 3}
-  - Count: 10
-    Type: 2
-    Icon: {fileID: 21300000, guid: f59401c5c79564fd1ae3bfb0876455a7, type: 3}
-  RewardTimer: {fileID: 385561700}
-  SlotsParent: {fileID: 1827698169}
-  SlotPrefab: {fileID: 4005562293174495102, guid: 37bf757e72aab96429e7985dc0e25f78,
-    type: 3}
-  ResetButton: {fileID: 1804511172}
-  GetRewardButton: {fileID: 260387771}
---- !u!114 &260387771 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 904241036130064381, guid: 15b7dd2017c4cf047b86577dc63c6436,
-    type: 3}
-  m_PrefabInstance: {fileID: 768230161}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &385561700 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 904241035009959871, guid: 15b7dd2017c4cf047b86577dc63c6436,
-    type: 3}
-  m_PrefabInstance: {fileID: 768230161}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,25 +206,156 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &768230161
+--- !u!1001 &958116686
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 904241035009959871, guid: 15b7dd2017c4cf047b86577dc63c6436,
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
         type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
-        type: 2}
-    - target: {fileID: 904241035102623889, guid: 15b7dd2017c4cf047b86577dc63c6436,
+      propertyPath: WeeklyTimeCooldown
+      value: 604800
+      objectReference: {fileID: 0}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
         type: 3}
-      propertyPath: m_fontAsset
+      propertyPath: WeeklyTimeDeadline
+      value: 1209600
+      objectReference: {fileID: 0}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: DailyRewards.Array.data[0].Icon
       value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
-        type: 2}
+      objectReference: {fileID: 21300000, guid: e0eac6b76fdd842e88a7f8c75ecffaf4,
+        type: 3}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: DailyRewards.Array.data[1].Icon
+      value: 
+      objectReference: {fileID: 21300000, guid: e0eac6b76fdd842e88a7f8c75ecffaf4,
+        type: 3}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: DailyRewards.Array.data[2].Icon
+      value: 
+      objectReference: {fileID: 21300000, guid: f59401c5c79564fd1ae3bfb0876455a7,
+        type: 3}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: DailyRewards.Array.data[3].Icon
+      value: 
+      objectReference: {fileID: 21300000, guid: f59401c5c79564fd1ae3bfb0876455a7,
+        type: 3}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: DailyRewards.Array.data[4].Icon
+      value: 
+      objectReference: {fileID: 21300000, guid: f59401c5c79564fd1ae3bfb0876455a7,
+        type: 3}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: DailyRewards.Array.data[5].Icon
+      value: 
+      objectReference: {fileID: 21300000, guid: f59401c5c79564fd1ae3bfb0876455a7,
+        type: 3}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: DailyRewards.Array.data[6].Icon
+      value: 
+      objectReference: {fileID: 21300000, guid: f59401c5c79564fd1ae3bfb0876455a7,
+        type: 3}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: DailyRewards.Array.data[0].Count
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: DailyRewards.Array.data[1].Count
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: DailyRewards.Array.data[2].Count
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: DailyRewards.Array.data[3].Count
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: DailyRewards.Array.data[4].Count
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: DailyRewards.Array.data[5].Count
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: DailyRewards.Array.data[6].Count
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: WeeklyRewards.Array.data[0].Icon
+      value: 
+      objectReference: {fileID: 21300000, guid: f59401c5c79564fd1ae3bfb0876455a7,
+        type: 3}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: WeeklyRewards.Array.data[0].Count
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: DailyRewards.Array.data[0].TypeByCur
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: DailyRewards.Array.data[1].TypeByCur
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: DailyRewards.Array.data[2].TypeByCur
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: DailyRewards.Array.data[3].TypeByCur
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: DailyRewards.Array.data[4].TypeByCur
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: DailyRewards.Array.data[5].TypeByCur
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: DailyRewards.Array.data[6].TypeByCur
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: DailyRewards.Array.data[0].TypeByDate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+        type: 3}
+      propertyPath: WeeklyRewards.Array.data[0].TypeByCur
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 904241035726058331, guid: 15b7dd2017c4cf047b86577dc63c6436,
         type: 3}
       propertyPath: m_Pivot.x
@@ -314,7 +369,7 @@ PrefabInstance:
     - target: {fileID: 904241035726058331, guid: 15b7dd2017c4cf047b86577dc63c6436,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 904241035726058331, guid: 15b7dd2017c4cf047b86577dc63c6436,
         type: 3}
@@ -411,14 +466,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Daily Reward Window
       objectReference: {fileID: 0}
-    - target: {fileID: 904241036235675995, guid: 15b7dd2017c4cf047b86577dc63c6436,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
-        type: 2}
-    m_RemovedComponents:
-    - {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15b7dd2017c4cf047b86577dc63c6436, type: 3}
 --- !u!1 &1444424562
 GameObject:
@@ -515,7 +563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4ce9e0026946a441872931de94fb3fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rewardView: {fileID: 12018993}
+  _rewardView: {fileID: 1542201553}
 --- !u!4 &1487575695
 Transform:
   m_ObjectHideFlags: 0
@@ -530,6 +578,79 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!850595691 &1523901051
+LightingSettings:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Settings.lighting
+  serializedVersion: 3
+  m_GIWorkflowMode: 1
+  m_EnableBakedLightmaps: 0
+  m_EnableRealtimeLightmaps: 0
+  m_RealtimeEnvironmentLighting: 1
+  m_BounceScale: 1
+  m_AlbedoBoost: 1
+  m_IndirectOutputScale: 1
+  m_UsingShadowmask: 1
+  m_BakeBackend: 0
+  m_LightmapMaxSize: 1024
+  m_BakeResolution: 40
+  m_Padding: 2
+  m_TextureCompression: 1
+  m_AO: 0
+  m_AOMaxDistance: 1
+  m_CompAOExponent: 1
+  m_CompAOExponentDirect: 0
+  m_ExtractAO: 0
+  m_MixedBakeMode: 2
+  m_LightmapsBakeMode: 1
+  m_FilterMode: 1
+  m_LightmapParameters: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
+  m_ExportTrainingData: 0
+  m_TrainingDataDestination: TrainingData
+  m_RealtimeResolution: 2
+  m_ForceWhiteAlbedo: 0
+  m_ForceUpdates: 0
+  m_FinalGather: 0
+  m_FinalGatherRayCount: 256
+  m_FinalGatherFiltering: 1
+  m_PVRCulling: 1
+  m_PVRSampling: 1
+  m_PVRDirectSampleCount: 32
+  m_PVRSampleCount: 500
+  m_PVREnvironmentSampleCount: 500
+  m_PVREnvironmentReferencePointCount: 2048
+  m_LightProbeSampleCountMultiplier: 4
+  m_PVRBounces: 2
+  m_PVRMinBounces: 2
+  m_PVREnvironmentMIS: 0
+  m_PVRFilteringMode: 2
+  m_PVRDenoiserTypeDirect: 0
+  m_PVRDenoiserTypeIndirect: 0
+  m_PVRDenoiserTypeAO: 0
+  m_PVRFilterTypeDirect: 0
+  m_PVRFilterTypeIndirect: 0
+  m_PVRFilterTypeAO: 0
+  m_PVRFilteringGaussRadiusDirect: 1
+  m_PVRFilteringGaussRadiusIndirect: 5
+  m_PVRFilteringGaussRadiusAO: 2
+  m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+  m_PVRFilteringAtrousPositionSigmaIndirect: 2
+  m_PVRFilteringAtrousPositionSigmaAO: 1
+--- !u!114 &1542201553 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 904241035726058330, guid: 15b7dd2017c4cf047b86577dc63c6436,
+    type: 3}
+  m_PrefabInstance: {fileID: 958116686}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fcf07d81ae01a94e91468830c96ffc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1674547692
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -550,7 +671,7 @@ PrefabInstance:
     - target: {fileID: 2242048530117943248, guid: 6bc161a32c2d418479ec6208b40424bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2242048530117943248, guid: 6bc161a32c2d418479ec6208b40424bf,
         type: 3}
@@ -649,21 +770,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bc161a32c2d418479ec6208b40424bf, type: 3}
---- !u!114 &1804511172 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 904241035382209702, guid: 15b7dd2017c4cf047b86577dc63c6436,
-    type: 3}
-  m_PrefabInstance: {fileID: 768230161}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!224 &1827698169 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 904241035818933802, guid: 15b7dd2017c4cf047b86577dc63c6436,
-    type: 3}
-  m_PrefabInstance: {fileID: 768230161}
-  m_PrefabAsset: {fileID: 0}
